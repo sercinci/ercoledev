@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Logistics Pioneers</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="">
+    <div class="container-fluid">
+        <ul class="nav nav-pills nav-fill mt-2 mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-edifici-tab" data-toggle="pill" href="#pills-edifici" role="tab" aria-controls="pills-edifici" aria-selected="true">Edifici</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-azioni-tab" data-toggle="pill" href="#pills-azioni" role="tab" aria-controls="pills-azioni" aria-selected="false">Azioni</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-edifici" role="tabpanel" aria-labelledby="pills-edifici-tab">
+                <h4 class="mb-3">Edifici piccoli 1PV</h4>
+
+                <div class="row piccoli">
+                    <div class="col-4 building-image gru-a-portale"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Gru a portale</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Aggiungi 1 risorsa dai territori toccati
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image pala-eolica"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Pala eolica</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Se il valore del dado del vento (dado a 6 facce) è:<br>
+                        1 non c’è vento<br>
+                        2-3-4-5 produce &#9889;<br>
+                        6 produce &#9889;&#9889;
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image gru-da-costruzione"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Gru da costruzione</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div>
+                                <div class="petrolio"></div>
+                                <div class="cristallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Puoi effettuare un'azione di costruzione che costi una energia alla fine del turno di ogni altro giocatore e di un grande edificio in più durante il tuo turno se soddisfi i requisiti energetici
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image magazzino"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Magazzino</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="pietra"></div>
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Può contenere fino a 3 container di merce che non possono essere rubati con guerre o altri eventi
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image gru-del-porto"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Gru del porto</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Può essere costruito solo se si possiede una GRU A PORTALE vicino all’acqua permette una sola volta per ogni turno lo scambio di 2 risorse uguali per una che finisce direttamente nel MAGAZZINO
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image intelligenza-artificiale"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Intelligenza artificiale</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div>
+                                <div class="cristallo"></div>
+                                <div class="cristallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Aggiungi o sottrai uno alla somma dei due dadi lanciati prima che i gocatori abbiano raccolto le risorse
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image gru-dello-scalo-merci"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Gru dello scalo merci</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div>
+                                <div class="cristallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Alla fine di ogni turno puoi spostare una risorsa dallo scalo merci al magazzino
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image recupero-rottami-ferrosi"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Recupero rottami ferrosi</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Sconta il costo di costruzione di un edificio / edificio grande di un acciaio
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image cementificio"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Cementificio</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="pietra"></div>
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="cristallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Sconta il costo di costruzione di un edificio / edificio grande di una roccia
+                    </div>
+                </div>
+
+                <h4 class="mb-2 mt-3">Edifici grandi 2PV</h4>
+
+                <div class="row grandi">
+                    <div class="col-4 building-image industria-robotizzata"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Industria robotizzata</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div>
+                                <div class="petrolio"></div>
+                                <div class="petrolio"></div>
+                                <div class="cristallo"></div>
+                                <div class="cristallo"></div>
+                                <div class="cristallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Puoi effettuare una sola azione che costi una energia alla fine del turno di ogni altro giocatore
+                    </div>
+                </div>
+                <div class="row grandi">
+                    <div class="col-4 building-image centrale-ad-olio-combustibile"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Centrale ad olio combustibile</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Permette di convertire &#127778;&#127778; in &#9889;
+                    </div>
+                </div>
+                <div class="row grandi">
+                    <div class="col-4 building-image fabbrica-di-binari"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Fabbrica di binari</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div>
+                                <div class="cristallo"></div>
+                                <div class="cristallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Non hai più limite alla costruzione di binari. Produce 2 binari per lo stesso numero di risorse
+                    </div>
+                </div>
+                <div class="row grandi">
+                    <div class="col-4 building-image uffici-commerciali"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Uffici commerciali</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div>
+                                <div class="petrolio"></div>
+                                <div class="cristallo"></div>
+                                <div class="cristallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Perette di costruire una seconda gru a portale su un altro lato dello stesso esagono
+                    </div>
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="col-4 building-image binari"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Binari</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="pietra"></div>
+                                <div class="metallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 building-image pannello-fotovoltaico"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Pannello fotovoltaico</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="cristallo"></div>
+                                <div class="cristallo"></div>
+                                <div class="cristallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Fornisce una energia solo nel tuo turno di gioco
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p>IL GRUISTA - 1 pv per chi possiede più gru (tutti gli edifici con gru nel nome contano)</p>
+                        <p>IL GUERRAFONDAIO - 1 pv per chi ha fatto più guerre</p>
+                        <p>IL FERROVIERE - 1 pv per chi possiede la ferrovia più lunga e la fabbrica di binari</p>
+                        <p>L’AMBIENTALISTA - 1 pv per chi possiede 3 pannelli fotovoltaici e la centrale eolica</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-azioni" role="tabpanel" aria-labelledby="pills-azioni-tab">
+                <!-- <h4 class="mb-3">Edifici piccoli 1PV</h4> -->
+                <p class="mb-3">&Egrave; possibile eseguire la stessa azione 1 sola volta per turno.</p>
+                <div class="row piccoli">
+                    <div class="col-4 building-image posa-binari"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Posa binari</h5>
+                            </div>
+                            <div class="col-12 resources" style="height: 25px;">
+                                <!-- <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Costruisci fino a 3 binari.
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image installazione-pannello-fotovoltaico"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Installazione pannello</h5>
+                            </div>
+                            <div class="col-12 resources" style="height: 25px;">
+                                <!-- <div class="pietra"></div>
+                                <div class="metallo"></div>
+                                <div class="metallo"></div>
+                                <div class="petrolio"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Costruisci fino ad 1 pannello fotovoltaico.
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image costruzione-edificio"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Costruzione edificio</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="energia"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Costruisci un edificio.
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image costruzione-grande-edificio"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Costruzione grande edificio</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="energia"></div>
+                                <div class="energia"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Costruisci un edificio grande.
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image furto-container"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Furto di container</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="energia"></div>
+                                <div class="petrolio"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Rubi un container da uno scalo merci raggiungibile tramite collegamento ferroviario (binario sotto una gru a portale di un avversario) e lo inserisci nel tuo magazzino (non puoi utilizzare l’azione furto di container se hai già il magazzino pieno).
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image noleggio-gru"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Nolleggio gru dello scalo</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="energia"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Trasferisce automaticamente tutti i container dalla stazione al magazzino fino a prima dell'inizio del tuo prossimo turno.
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image energia"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Energia da combustibile</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="petrolio"></div>
+                                <div class="petrolio"></div>
+                                <div class="petrolio"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Brucia 3 container di olio combustibileper produrre 1 energia.
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image smantellamento"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Smantellamento</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="energia"></div>
+                                <div class="petrolio"></div>
+                                <div class="cristallo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Smantella un settore della base d'appoggio recuperando:
+                        <div class="resources mb-1">
+                            <div class="metallo"></div>
+                            <div class="cristallo"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row piccoli">
+                    <div class="col-4 building-image commercio"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Commercio</h5>
+                            </div>
+                            <div class="col-12 resources">
+                                <div class="energia"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 description">
+                        Permette di scambiare due risorse uguali per una risorsa a tua scelta.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* Logistics Pioneers images - Property of @Massi_the_Maker */
+.gru-a-portale {
+    background-image: url('images/Risorsa 12.svg');
+}
+
+.pala-eolica {
+    background-image: url('images/Risorsa 13.svg');
+}
+
+.gru-da-costruzione {
+    background-image: url('images/Risorsa 14.svg');
+}
+
+.magazzino {
+    background-image: url('images/Risorsa 15.svg');
+}
+
+.gru-del-porto {
+    background-image: url('images/Risorsa 16.svg');
+}
+
+.intelligenza-artificiale {
+    background-image: url('images/Risorsa 17.svg');
+}
+
+.gru-dello-scalo-merci {
+    background-image: url('images/Risorsa 18.svg');
+}
+
+.recupero-rottami-ferrosi {
+    background-image: url('images/Risorsa 19.svg');
+}
+
+.cementificio {
+    background-image: url('images/Risorsa 20.svg');
+}
+
+.industria-robotizzata {
+    background-image: url('images/Risorsa 21.svg');
+}
+
+.centrale-ad-olio-combustibile {
+    background-image: url('images/Risorsa 22.svg');
+}
+
+.fabbrica-di-binari {
+    background-image: url('images/Risorsa 23.svg');
+}
+
+.uffici-commerciali {
+    background-image: url('images/Risorsa 24.svg');
+}
+
+.binari {
+    background-image: url('images/Risorsa 25.svg');
+}
+
+.pannello-fotovoltaico {
+    background-image: url('images/Risorsa 26.svg');
+}
+
+.cristallo {
+    background-image: url('images/Risorsa 27.svg');
+}
+
+.metallo {
+    background-image: url('images/Risorsa 28.svg');
+}
+
+.pietra {
+    background-image: url('images/Risorsa 29.svg');
+}
+
+.petrolio {
+    background-image: url('images/Risorsa 30.svg');
+}
+
+.energia {
+    background-image: url('images/Risorsa 37.svg');
+}
+
+.posa-binari {
+    background-image: url('images/Risorsa 31.svg');
+}
+
+.installazione-pannello-fotovoltaico {
+    background-image: url('images/Risorsa 32.svg');
+}
+
+.costruzione-edificio {
+    background-image: url('images/Risorsa 33.svg');
+}
+
+.costruzione-grande-edificio {
+    background-image: url('images/Risorsa 34.svg');
+}
+
+.furto-container {
+    background-image: url('images/Risorsa 35.svg');
+}
+
+.noleggio-gru {
+    background-image: url('images/Risorsa 36.svg');
+}
+
+.smantellamento {
+    background-image: url('images/Risorsa 38.svg');
+}
+
+.commercio {
+    background-image: url('images/Risorsa 39.svg');
+}
+
+/* Page custom styles */
+h5 {
+    text-transform: uppercase;
+}
+
+.building-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.resources {
+    display: flex;
+}
+
+.resources > div {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 25px;
+    width: 25px;
+}
+
+.description {
+    /*border-bottom: 10px solid #000000;*/
+}
+
+.piccoli > .description:after {
+    content: '';
+    position: relative;
+    background: repeating-linear-gradient(
+        45deg,
+        #FFEB38,
+        #FFEB38 10px,
+        #000000 10px,
+        #000000 20px
+    );
+    height: 10px;
+    display: block;
+}
+
+.grandi > .description:after {
+    content: '';
+    position: relative;
+    background: repeating-linear-gradient(
+        45deg,
+        #03BD00,
+        #03BD00 10px,
+        #000000 10px,
+        #000000 20px
+    );
+    height: 10px;
+    display: block;
+}
+
+.container-fluid > .row {
+    /*padding: 0.5rem 0;*/
+}

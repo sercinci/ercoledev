@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.175 55.437">
+  <defs>
+    <style>
+      .a, .b {
+        fill: #231f20;
+      }
+
+      .b {
+        font-size: 6.826px;
+        font-family: FranklinGothic-Heavy, Franklin Gothic Heavy;
+        letter-spacing: 0.008em;
+      }
+
+      .c {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <title>Risorsa 19</title>
+  <g>
+    <rect class="a" x="29.016" y="42.512" width="1.81" height="5.548"/>
+    <rect class="a" x="34.564" y="42.512" width="1.81" height="5.548"/>
+    <rect class="a" x="40.111" y="42.512" width="1.81" height="5.548"/>
+    <rect class="a" x="45.658" y="42.512" width="1.81" height="5.548"/>
+    <rect class="a" x="51.207" y="42.512" width="1.81" height="5.548"/>
+    <path class="a" d="M58.231,53.627V26.254L45.208,32.765,43.388,0h-9.1l-1.87,29.916-5.723,2.861L24.88,8.321H15.813L13.936,29.91.944,36.405V53.627H0v1.81H59.175v-1.81ZM35.985,1.81h5.691l.1,1.888H35.867Zm-.231,3.7h6.127l.1,1.888h-6.35Zm-.231,3.7h6.564l1.357,24.44L39.739,35.5V26.254L34.287,28.98Zm-18.05.925H23.2l.14,1.888h-6.03Zm-.322,3.7h6.322l.14,1.888H16.987Zm-.322,3.7h6.918l1.194,16.124L21.247,35.5V26.254L15.836,28.96ZM6.492,53.627H2.754V51.739H6.492v1.888Zm16.642,0H8.3V47.116H23.134Zm33.286,0H24.945V51.739H56.42Zm0-3.7H24.945V45.306H6.492v4.623H2.754v-12.4l16.682-8.341V38.43l18.492-9.247V38.43L56.42,29.183V49.929Z"/>
+    <text class="b" transform="translate(6.05 44.668)">S<tspan class="c" x="4.2" y="0">TEEL</tspan></text>
+  </g>
+</svg>
