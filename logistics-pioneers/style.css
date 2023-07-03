@@ -1,8 +1,31 @@
 /* Logistics Pioneers images - Property of @Massi_the_Maker */
+.magazzinogrande {
+    background-image: url('images/magazzinogrande.svg');
+}
+
+.depositocarburante {
+    background-image: url('images/depositocarburante.svg');
+}
+
+.depositocarburantegrande {
+    background-image: url('images/depositocarburantegrande.svg');
+}
+
+.depositolocomotive {
+    background-image: url('images/depositolocomotive.svg');
+}
+
+.pianocaricatorebinario {
+    background-image: url('images/pianocaricatorebinario.svg');
+}
+
+.stazioneinternazionale {
+    background-image: url('images/stazioneinternazionale.svg');
+}
+
 .gru-a-portale {
     background-image: url('images/gru-a-portale.svg');
 }
-
 .pala-eolica {
     background-image: url('images/Risorsa 13.svg');
 }
