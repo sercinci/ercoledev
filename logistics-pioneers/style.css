@@ -1,4 +1,20 @@
 /* Logistics Pioneers images - Property of @Massi_the_Maker */
+.batteria {
+    background-image: url('images/Batteria.svg');
+}
+
+.torreradio {
+    background-image: url('images/torrerradio.svg');
+}
+
+.polizia {
+    background-image: url('images/polizia.svg');
+}
+
+.banca {
+    background-image: url('images/banca.svg');
+}
+
 .magazzinogrande {
     background-image: url('images/magazzinogrande.svg');
 }
