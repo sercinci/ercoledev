@@ -6,30 +6,23 @@ const experiences = [
   {
     role: "Senior Software Engineer",
     company: "Hero Journey Club",
-    period: "Sept 2024 - Present",
+    period: "2024 - 2026",
     description:
-      "Designing, developing, and maintaining multiple products using Next.js and NestJS, deployed on Vercel and AWS. Implementing real-time voice communication systems, AI context management flows, and real-time event systems integrating various AWS services.",
-  },
-  {
-    role: "Full Stack Developer",
-    company: "ErcoleDev",
-    period: "Jan 2019 - Present",
-    description:
-      "Developing custom web platforms and solutions using React, Node.js, and AWS for clients worldwide.",
+      "Real-time AI-driven mental health platform embedded in gaming ecosystems to support thousands of users. • Architected real-time AI voice communication platform using STT/TTS pipelines enabling live conversational experiences at scale • Designed event-driven AWS architecture orchestrating real-time web services and game plugins, including automated on-demand server provisioning • Led system architecture and scalability strategy, improving performance, fault tolerance, and cloud reliability across products • Delivered end-to-end full-stack systems using Next.js, NestJS, AWS, and Vercel in rapid iteration startup environment",
   },
   {
     role: "Senior Software Engineer",
-    company: "ImmoScout24 Austria",
-    period: "Aug 2019 - Aug 2024",
+    company: "ImmobilienScout24",
+    period: "2019 - 2024",
     description:
-      "Developed and maintained core features for Austria's leading real estate platform using Node.js, React, TypeScript, GraphQL, and Elasticsearch, focusing on scalability and exceptional user experience.",
+      "• Led full-stack development across 60+ microservices powering a large-scale distributed platform on AWS • Built serverless event-driven systems handling high-traffic production workloads with high availability and horizontal scalability, supporting thousands of concurrent users • Improved CI/CD pipelines and system reliability across multi-team microservice environment • Contributed to long-term platform modernization and performance optimization initiatives",
   },
   {
-    role: "Front End Web Developer",
-    company: "Juniper XS",
-    period: "Apr 2016 - Jun 2018",
+    role: "Lead Engineer / Freelancer",
+    company: "ErcoleDev",
+    period: "2016 - 2019",
     description:
-      "Development of ENDU, events aggregator, results provider and social network for athletes in endurance sports.",
+      "• Designed and scaled full cloud infrastructures for early-stage startups across fintech, AI, and streaming products • Served as technical lead and CTO-level contributor for multiple European startups • Built scalable frontends, backend systems, and cloud architectures end to end",
   },
 ];
 
@@ -58,7 +51,17 @@ export const Experience = () => {
                 </div>
                 <div className="md:col-span-2">
                   <h4 className="text-lg font-semibold mb-2">{exp.role}</h4>
-                  <p className="text-muted-foreground">{exp.description}</p>
+                  <div className="text-muted-foreground">
+                    {exp.description.split("•").map((point, index) => {
+                      if (point.trim() === "") return null;
+                      return (
+                        <div key={index} className="mb-2 last:mb-0">
+                          {index > 0 && <span className="text-primary mr-2">•</span>}
+                          {point.trim()}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </motion.div>
