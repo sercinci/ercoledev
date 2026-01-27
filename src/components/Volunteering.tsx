@@ -5,6 +5,20 @@ import { Heart, ExternalLink } from "lucide-react";
 
 const volunteering = [
     {
+        organization: "Coding Club Vienna",
+        role: "Mentor",
+        period: "Aug 2023 - Present",
+        website: "https://www.meetup.com/coding-club-vienna/",
+        description:
+            "Helping developers with system design, modern frontend/backend stacks, cloud architecture, and AI-native workflows through community meetups. Supporting the local tech community by sharing expertise and best practices while fostering collaborative learning environments for developers of all skill levels.",
+        responsibilities: [
+            "Mentor developers on system design and architecture patterns",
+            "Share expertise on modern frontend/backend technologies and best practices",
+            "Guide developers on cloud architecture and AI-native workflows",
+            "Foster collaborative learning environments during community meetups",
+        ],
+    },
+    {
         organization: "Associazione Ferramatori Trentino Alto Adige",
         role: "Member",
         period: "Jan 2019 - Present",

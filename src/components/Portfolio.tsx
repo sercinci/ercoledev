@@ -5,6 +5,13 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Picks & Bans",
+    description:
+      "Draft platform inspired by Dota 2's Captain's Mode for Age of Empires II team matches. Features match tracking, player history, leaderboards, and individual ranking progression.",
+    tags: ["React", "Node.js", "Socket.io", "Sequelize", "OAuth"],
+    link: "https://picknban.xyz",
+  },
+  {
     title: "Lupus Noctis",
     description:
       "Reimagining of the classic Werewolves party game with unique characters and a Progressive Web App. Perfect blend of smartphone convenience and board game social interaction with a perfect Lighthouse score.",
@@ -17,13 +24,6 @@ const projects = [
     description:
       "Hacking Industry Camp 2018 winner (5 awards). Gives electric car batteries a second life as domestic photovoltaic storage with real-time monitoring and energy management.",
     tags: ["Python", "Node.js", "MongoDB", "IoT", "Raspberry Pi"],
-  },
-  {
-    title: "Picks & Bans",
-    description:
-      "Draft platform inspired by Dota 2's Captain's Mode for Age of Empires II team matches. Features match tracking, player history, leaderboards, and individual ranking progression.",
-    tags: ["React", "Node.js", "Socket.io", "Sequelize", "OAuth"],
-    link: "https://picknban.xyz",
   },
   {
     title: "Hansel & You",
@@ -49,7 +49,7 @@ const projects = [
 
 export const Portfolio = () => {
   return (
-    <section id="work" className="py-24 bg-white/5">
+    <section id="projects" className="py-24 bg-white/5">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

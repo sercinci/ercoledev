@@ -22,9 +22,9 @@ export const About = () => {
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             I specialize in building scalable web applications using modern technologies, with a
-            particular focus on creating exceptional user experiences. Whether it's implementing
-            hybrid search solutions, developing Progressive Web Apps, or architecting serverless
-            applications on AWS, I bring enthusiasm and expertise to every project.
+            particular focus on creating exceptional user experiences. Leveraging AI-native development practices,
+            whether it's implementing hybrid search solutions, developing Progressive Web Apps, or architecting
+            serverless applications on AWS, I bring enthusiasm and expertise to every project.
           </p>
 
           <div className="mt-12 flex flex-col md:flex-row justify-center gap-12 md:gap-16">

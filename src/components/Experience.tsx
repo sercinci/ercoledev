@@ -28,9 +28,9 @@ const experiences = [
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-24 bg-white/5">
+    <section id="experiences" className="py-24 bg-white/5">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Experiences</h2>
         <div className="max-w-3xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
             <motion.div

@@ -35,10 +35,10 @@ export const Hero = () => {
               Let's Connect
             </a>
             <a
-              href="#experience"
+              href="#experiences"
               className="px-8 py-3 rounded-full bg-secondary text-secondary-foreground border border-white/10 hover:bg-white/5 transition-colors"
             >
-              My Experience
+              My Experiences
             </a>
           </div>
         </motion.div>
