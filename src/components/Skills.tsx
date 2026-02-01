@@ -34,6 +34,8 @@ const skills = [
 
   // Backend
   "NestJS",
+  "Express.js",
+  "Hapi.js",
   "REST APIs",
   "GraphQL",
   "Socket.io",
@@ -97,6 +99,7 @@ const skills = [
   "React Testing Library",
   "Cypress",
   "Playwright",
+  "ESLint",
   "GIT",
   "Python",
   "Prettier",
