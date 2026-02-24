@@ -15,7 +15,7 @@ const projects = [
     title: "Picks & Bans",
     description:
       "Draft platform inspired by Dota 2's Captain's Mode for Age of Empires II team matches. Features match tracking, player history, leaderboards, and individual ranking progression.",
-    tags: ["React", "Node.js", "Socket.io", "Sequelize", "OAuth"],
+    tags: ["Next.js", "Node.js", "Prisma", "PostgreSQL", "OAuth", "SSE"],
     link: "https://picknban.xyz",
   },
   {
