@@ -12,6 +12,14 @@ const projects = [
     link: "https://xcore.gg",
   },
   {
+    title: "Sursk.it",
+    description:
+      "Full-stack Pokémon data app for Gen 3 PokeMMO tournament prep. Browse Pokémon, moves, and Hoenn encounter locations through a typed JSON API with combined filters, pagination, and English/Italian localization.",
+    tags: ["Vue 3", "FastAPI", "Python", "TypeScript", "Docker"],
+    link: "https://sursk.it",
+    github: "https://github.com/sercinci/sursk.it",
+  },
+  {
     title: "Picks & Bans",
     description:
       "Draft platform inspired by Dota 2's Captain's Mode for Age of Empires II team matches. Features match tracking, player history, leaderboards, and individual ranking progression.",

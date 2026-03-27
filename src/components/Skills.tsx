@@ -20,11 +20,13 @@ const skills = [
   "JavaScript",
   "PWA",
   "Tailwind CSS",
+  "Vue",
   "Storybook",
   "HTML",
   "CSS",
   "SASS",
   "SCSS",
+  "Angular.js",
 
   // Libraries
   "React Query",
@@ -38,6 +40,8 @@ const skills = [
   "Hapi.js",
   "REST APIs",
   "GraphQL",
+  "Hasura",
+  "FastAPI",
   "Socket.io",
   "Sequelize",
   "OAuth",
@@ -83,6 +87,7 @@ const skills = [
   "GitHub Actions",
   "Jenkins",
   "Docker",
+  "Kubernetes",
 
   // Architecture
   "Microservices",
