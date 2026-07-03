@@ -21,10 +21,10 @@ export const Contact = () => {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <a
-              href="mailto:federico.ercole@proton.me"
+              href="mailto:federico@ercole.dev"
               className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
             >
-              <Mail size={20} /> federico.ercole@proton.me
+              <Mail size={20} /> federico@ercole.dev
             </a>
             <div className="flex gap-4">
               <a
