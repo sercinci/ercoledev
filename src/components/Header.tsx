@@ -2,12 +2,20 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
 
-const navItems = [
+const homeNav = [
+  { name: "Offers", href: "#services" },
+  { name: "Websites", href: "#websites" },
+  { name: "Projects", href: "#projects" },
   { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
+];
+
+const cvNav = [
   { name: "Experiences", href: "#experiences" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
@@ -18,6 +26,12 @@ const navItems = [
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isCv = pathname?.startsWith("/cv") ?? false;
+  const navItems = isCv ? cvNav : homeNav;
+  const crossLink = isCv
+    ? { name: "Offers", href: "/" }
+    : { name: "Full CV", href: "/cv" };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +64,12 @@ export const Header = () => {
               {item.name}
             </Link>
           ))}
+          <Link
+            href={crossLink.href}
+            className="text-sm font-medium px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors"
+          >
+            {crossLink.name}
+          </Link>
           <div className="border-l border-white/10 pl-6 ml-2">
             <ThemeToggle />
           </div>
@@ -83,6 +103,13 @@ export const Header = () => {
                   {item.name}
                 </Link>
               ))}
+              <Link
+                href={crossLink.href}
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-medium text-primary"
+              >
+                {crossLink.name}
+              </Link>
             </nav>
           </motion.div>
         )}

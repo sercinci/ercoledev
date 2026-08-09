@@ -1,74 +1,87 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { useState } from "react";
+import { ExternalLink, Github, Play } from "lucide-react";
+import { VideoModal } from "./VideoModal";
+import { clientProjects, projects, type Project } from "@/lib/projects";
 
-const projects = [
-  {
-    title: "xcore.gg",
-    description:
-      "Create your unified gaming profile. One identity for all your games across Steam, Xbox, PlayStation, and more. Connect with gamers worldwide.",
-    tags: ["Next.js", "Node.js", "AWS", "Prisma", "PostgreSQL"],
-    link: "https://xcore.gg",
-  },
-  {
-    title: "Sursk.it",
-    description:
-      "Full-stack Pokémon data app for Gen 3 PokeMMO tournament prep. Browse Pokémon, moves, and Hoenn encounter locations through a typed JSON API with combined filters, pagination, and English/Italian localization.",
-    tags: ["Vue 3", "FastAPI", "Python", "TypeScript", "Docker"],
-    link: "https://sursk.it",
-    github: "https://github.com/sercinci/sursk.it",
-  },
-  {
-    title: "Picks & Bans",
-    description:
-      "Draft platform inspired by Dota 2's Captain's Mode for Age of Empires II team matches. Features match tracking, player history, leaderboards, and individual ranking progression.",
-    tags: ["Next.js", "Node.js", "Prisma", "PostgreSQL", "OAuth", "SSE"],
-    link: "https://picknban.xyz",
-  },
-  {
-    title: "Lupus Noctis",
-    description:
-      "Reimagining of the classic Werewolves party game with unique characters and a Progressive Web App. Perfect blend of smartphone convenience and board game social interaction with a perfect Lighthouse score.",
-    tags: ["PWA", "Angular", "AWS Lambda", "DynamoDB", "Cognito"],
-    link: "https://sercinci.github.io/lupusnoctislanding",
-    github: "https://github.com/sercinci/lupusnoctislanding",
-  },
-  {
-    title: "2BATTS",
-    description:
-      "Hacking Industry Camp 2018 winner (5 awards). Gives electric car batteries a second life as domestic photovoltaic storage with real-time monitoring and energy management.",
-    tags: ["Python", "Node.js", "MongoDB", "IoT", "Raspberry Pi"],
-  },
-  {
-    title: "Hansel & You",
-    description:
-      "Philips Challenge Winner at Inno{Hacks} 2017. Interactive Amazon Alexa Skill that brings audiobooks to life with user-driven narratives and decision-making.",
-    tags: ["Alexa Skills", "Node.js", "Voice UI"],
-    link: "https://devpost.com/software/hansel-you",
-  },
-  {
-    title: "Nautiscuola Quiz",
-    description:
-      "Responsive web application for nautical license exam simulations and chapter-organized test preparation with optimized UX for different devices.",
-    tags: ["JavaScript", "Responsive Design", "Web App"],
-    link: "http://nautiscuola.it/quiz/",
-  },
-  {
-    title: "BeEco",
-    description:
-      "3rd place at Accenture Hackathon. Rewarding platform incentivizing eco-sustainable commuting with points for achievements. Includes brand challenges and corporate competitions.",
-    tags: ["Gamification", "Sustainability", "Mobile"],
-  },
-];
+type PortfolioProps = {
+  /** "clients" shows only live client-grade work. "all" adds the hackathon wins and side projects. */
+  variant?: "clients" | "all";
+};
 
-export const Portfolio = () => {
-  const [featuredProject, ...otherProjects] = projects;
+const copy = {
+  clients: {
+    heading: "Selected Work",
+    intro: "Live platforms and sites I designed, built and shipped.",
+  },
+  all: {
+    heading: "Projects & Hackathons",
+    intro: "Client platforms, side projects and the hackathons I won along the way.",
+  },
+};
+
+const ProjectLinks = ({
+  project,
+  onPlay,
+  size = "sm",
+}: {
+  project: Project;
+  onPlay: () => void;
+  size?: "sm" | "lg";
+}) => {
+  const iconSize = size === "lg" ? 20 : 16;
+  const textClass = size === "lg" ? "text-base" : "text-sm";
+
+  return (
+    <>
+      {project.video && (
+        <button
+          onClick={onPlay}
+          className={`flex items-center gap-2 ${textClass} font-medium hover:text-primary transition-colors cursor-pointer`}
+        >
+          <Play size={iconSize} /> Watch the demo
+        </button>
+      )}
+      {project.link && (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex items-center gap-2 ${textClass} font-medium hover:text-primary transition-colors`}
+        >
+          <ExternalLink size={iconSize} /> Visit
+        </a>
+      )}
+      {project.github && (
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex items-center gap-2 ${textClass} font-medium hover:text-primary transition-colors`}
+        >
+          <Github size={iconSize} /> Code
+        </a>
+      )}
+    </>
+  );
+};
+
+export const Portfolio = ({ variant = "clients" }: PortfolioProps) => {
+  const [activeVideo, setActiveVideo] = useState<Project["video"] | null>(null);
+
+  const list = variant === "clients" ? clientProjects : projects;
+  const [featuredProject, ...otherProjects] = list;
+  const { heading, intro } = copy[variant];
 
   return (
     <section id="projects" className="py-24 bg-white/5">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Projects</h2>
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{heading}</h2>
+          <p className="text-lg text-muted-foreground">{intro}</p>
+        </div>
 
         {/* Featured Project */}
         <motion.div
@@ -101,16 +114,12 @@ export const Portfolio = () => {
                 ))}
               </div>
 
-              <div className="flex gap-6 mt-auto">
-                {featuredProject.link && (
-                  <a
-                    href={featuredProject.link}
-                    target="_blank"
-                    className="flex items-center gap-2 text-base font-medium hover:text-primary transition-colors bg-white/5 px-4 py-2 rounded-lg border border-white/10 hover:bg-white/10"
-                  >
-                    <ExternalLink size={20} /> Check it out
-                  </a>
-                )}
+              <div className="flex flex-wrap gap-6 mt-auto">
+                <ProjectLinks
+                  project={featuredProject}
+                  size="lg"
+                  onPlay={() => setActiveVideo(featuredProject.video ?? null)}
+                />
               </div>
             </div>
           </div>
@@ -120,7 +129,7 @@ export const Portfolio = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {otherProjects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -143,30 +152,24 @@ export const Portfolio = () => {
                 ))}
               </div>
 
-              <div className="flex gap-4 mt-auto">
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
-                  >
-                    <ExternalLink size={16} /> Link
-                  </a>
-                )}
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
-                  >
-                    <Github size={16} /> Code
-                  </a>
-                )}
+              <div className="flex flex-wrap gap-4 mt-auto">
+                <ProjectLinks
+                  project={project}
+                  onPlay={() => setActiveVideo(project.video ?? null)}
+                />
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      <VideoModal
+        isOpen={activeVideo !== null}
+        onClose={() => setActiveVideo(null)}
+        videoSrc={activeVideo?.src ?? ""}
+        title={activeVideo?.title}
+        description={activeVideo?.description}
+      />
     </section>
   );
 };

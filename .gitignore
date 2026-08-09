@@ -42,5 +42,8 @@ next-env.d.ts
 # IntelliJ project files
 .idea
 *.iml
+
+# local Claude Code settings
+.claude/settings.local.json
 out
 gen

@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export const About = () => {
   return (
@@ -14,17 +16,28 @@ export const About = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            I am a Senior Software Engineer with a passion for Full Stack Web Development and
-            innovation. Currently based in Vienna, Austria, I thrive in the tech community through
-            active participation in hackathons and networking events. My journey has taken me from
-            winning multiple hackathon awards to working with leading tech companies like
-            ImmoScout24 Austria and Hero Journey Club.
+            I am a senior software and product engineer based in Vienna, Austria. Ten years of
+            full-stack engineering on systems carrying real production traffic, at ImmobilienScout24
+            and at Hero Journey Club, and as the technical lead who built the cloud infrastructure
+            for a string of European startups.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            I work across the frontend, the backend and the cloud with the same depth in each.
+            Real-time AI voice pipelines, agents that do real work, hybrid search, Progressive Web
+            Apps, event-driven systems and serverless architecture on AWS. I design the
+            architecture, write the code and own the result in production.
+          </p>
+          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            I am a product engineer as well as a software engineer. I decide what gets built, what
+            gets cut and what ships first, a habit built leading early-stage startups where the
+            specification does not exist yet. xcore.gg, Picks & Bans and Sursk.it are my own
+            products, each taken from an idea and a domain name to a live platform with real users.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            I specialize in building scalable web applications using modern technologies, with a
-            particular focus on creating exceptional user experiences. Leveraging AI-native development practices,
-            whether it's implementing hybrid search solutions, developing Progressive Web Apps, or architecting
-            serverless applications on AWS, I bring enthusiasm and expertise to every project.
+            I am at my best around other builders. I mentor developers on system design, cloud
+            architecture and AI-native workflows. At hackathons I bring the team spirit that makes a
+            group click, and the prizes that come with it. I also run the digital presence of a
+            cultural association in Northern Italy. I work in English, German and Italian.
           </p>
 
           <div className="mt-12 flex flex-col md:flex-row justify-center gap-12 md:gap-16">
@@ -49,6 +62,15 @@ export const About = () => {
                 <li>⚽ Football player</li>
               </ul>
             </div>
+          </div>
+
+          <div className="mt-12">
+            <Link
+              href="/cv"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary/10 border border-primary/20 text-primary font-medium hover:bg-primary/20 transition-colors"
+            >
+              Read the full CV <ArrowRight size={18} />
+            </Link>
           </div>
         </motion.div>
       </div>

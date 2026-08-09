@@ -3,6 +3,24 @@
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Github } from "lucide-react";
 
+const mailtoHref =
+  "mailto:federico@ercole.dev" +
+  "?subject=" +
+  encodeURIComponent("Project enquiry from ercole.dev") +
+  "&body=" +
+  encodeURIComponent(
+    [
+      "Hi Federico,",
+      "",
+      "What I need:",
+      "Which package (if any):",
+      "Timeline:",
+      "Budget:",
+      "",
+      "Thanks,",
+    ].join("\n")
+  );
+
 export const Contact = () => {
   return (
     <section id="contact" className="py-24">
@@ -13,15 +31,18 @@ export const Contact = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto p-12 rounded-3xl bg-gradient-to-br from-primary/10 to-transparent border border-primary/20"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Connect</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Interested in my profile? I am always open to discussing new engineering challenges and
-            opportunities.
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Start a Project</h2>
+          <p className="text-lg text-muted-foreground mb-4">
+            Tell me what you need in a few lines. I reply within a day with a fixed price and a
+            start date.
+          </p>
+          <p className="text-sm text-muted-foreground mb-8">
+            Happy to have a short call first if you prefer.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <a
-              href="mailto:federico@ercole.dev"
+              href={mailtoHref}
               className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
             >
               <Mail size={20} /> federico@ercole.dev

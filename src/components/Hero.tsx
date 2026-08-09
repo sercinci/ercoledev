@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { VideoModal } from "./VideoModal";
 import { Play } from "lucide-react";
@@ -22,30 +23,34 @@ export const Hero = () => {
             transition={{ duration: 0.5 }}
             className="order-2 md:order-1"
           >
-            <div className="inline-block px-3 py-1 mb-4 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-              Open to new opportunities
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+              </span>
+              Available for freelance projects
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
               Federico <span className="text-primary">Ercole</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-lg">
-              Passionate Software Engineer who thrives on solving complex challenges and
-              architecting cutting-edge solutions. Transforming ambitious ideas into robust,
-              scalable systems with precision and innovation.
+              Senior software and product engineer based in Vienna. I own the whole build, from the
+              product decisions down to the cloud it runs on. Real-time AI voice for thousands of
+              live users, 60+ microservices in production, and startups taken from zero to launch.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="#contact"
+                href="#services"
                 className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
               >
-                Let's Connect
+                See Offers & Prices
               </a>
-              <a
-                href="#experiences"
+              <Link
+                href="/cv"
                 className="px-8 py-3 rounded-full bg-secondary text-secondary-foreground border border-white/10 hover:bg-white/5 transition-colors"
               >
-                My Experiences
-              </a>
+                Full CV
+              </Link>
               <button
                 onClick={() => setIsVideoModalOpen(true)}
                 className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity flex items-center gap-2 cursor-pointer"

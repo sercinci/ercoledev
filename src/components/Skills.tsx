@@ -208,7 +208,8 @@ export const Skills = () => {
               className="p-8 rounded-2xl bg-background/80 border border-border"
             >
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Federico doesn't know yet that skill or perhaps forgot to add it to the list.
+                That one is not on the list yet. Federico picks up new stacks fast, so it is worth
+                asking.
                 <a
                   href="#contact"
                   className="block mt-2 text-primary font-medium hover:text-primary/80 transition-colors"
