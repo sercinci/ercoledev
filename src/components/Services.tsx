@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mic, Cloud, Bot, Globe, Check, ArrowRight } from "lucide-react";
+import { Mic, Cloud, Bot, Globe, Check, ArrowRight, Wrench } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 type Service = {
@@ -153,6 +153,36 @@ export const Services = () => {
           ))}
         </div>
 
+        {/* Open-ended work that cannot carry a fixed price */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto mt-8 p-8 rounded-3xl bg-background border border-dashed border-primary/30 flex flex-col md:flex-row md:items-center gap-6"
+        >
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="p-2 rounded-xl bg-primary/10 border border-primary/20 text-primary">
+                <Wrench size={20} />
+              </div>
+              <h3 className="text-xl font-bold">Consultancy and existing sites</h3>
+            </div>
+            <p className="text-muted-foreground">
+              Already have a website or a system that needs work? I take on consultancy and
+              improvements to what you already run: making an existing site faster, easier to find
+              and easier to use, moving it off a page builder, reviewing a technical decision before
+              you commit to it, or being the senior engineer your team can call. Every case is
+              different, so I quote each one on its own.
+            </p>
+          </div>
+          <a
+            href="#contact"
+            className="flex-shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+          >
+            Tell me what you have <ArrowRight size={18} />
+          </a>
+        </motion.div>
+
         <div className="max-w-5xl mx-auto mt-10 grid sm:grid-cols-3 gap-4 text-sm text-muted-foreground">
           <div className="p-4 rounded-xl bg-background border border-white/10">
             <span className="text-foreground font-medium">50% upfront</span>, 50% on delivery.
@@ -168,12 +198,6 @@ export const Services = () => {
           </div>
         </div>
 
-        <p className="text-center text-muted-foreground mt-8">
-          Need something that is not on this list?{" "}
-          <a href="#contact" className="text-primary font-medium hover:underline">
-            Describe it and I will quote it.
-          </a>
-        </p>
       </div>
     </section>
   );

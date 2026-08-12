@@ -23,6 +23,14 @@ export const websites: Website[] = [
     isThisSite: true,
   },
   {
+    domain: "forcecx.com",
+    href: "https://forcecx.com",
+    role: "Built and maintained",
+    description:
+      "Site for an independent commissioning engineer serving industrial clients. Sectors, services, coverage and credentials laid out clearly, with an enquiry form that turns a visitor into a scoped project request. Published in English, Italian and German.",
+    tags: ["Business site", "Enquiry form", "Three languages"],
+  },
+  {
     domain: "globalcucina.com",
     href: "https://globalcucina.com",
     role: "Built and maintained",

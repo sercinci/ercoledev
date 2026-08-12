@@ -31,6 +31,10 @@ alongside a main role.
   sections, with SEO metadata, sitemap, analytics, a working contact form, deployment, domain
   connection and two rounds of revisions. The client owns the code outright with no platform
   lock-in. Ongoing maintenance and updates are available afterwards for a monthly rate.
+- **Consultancy and existing site improvements. Quoted per case.** Work on systems and websites
+  that already exist: making a site faster, easier to find and easier to use, migrating away from a
+  page builder, reviewing a technical decision before it is committed to, or acting as the senior
+  engineer a team can call on. No fixed price, since every case differs. Contact for a quote.
 
 Custom work outside these packages is quoted on request.
 
@@ -59,6 +63,8 @@ Protocol, workflow automation, PostgreSQL, Prisma, GraphQL, Docker, Kubernetes, 
 Sites built or maintained by Federico Ercole that are publicly reachable:
 
 - https://www.ercole.dev, built and maintained. Static Next.js, deployed on push.
+- https://forcecx.com, built and maintained. Site for an independent commissioning engineer
+  serving industrial clients, with an enquiry form and content in English, Italian and German.
 - https://globalcucina.com, built and maintained. Cooking and recipe site with recipes browsable by
   course and by cuisine, plus search and filtering.
 - https://www.ferramatori.com, built and maintained. Official site of a railway culture association

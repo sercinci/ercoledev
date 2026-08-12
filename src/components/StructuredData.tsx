@@ -1,6 +1,9 @@
 import { siteUrl } from "@/lib/seo";
 
-const offers = [
+/** Price is omitted for work that is quoted per case. */
+type ServiceOffer = { name: string; description: string; price?: number };
+
+const offers: ServiceOffer[] = [
   {
     name: "AI Voice Agent PoC",
     description:
@@ -24,6 +27,11 @@ const offers = [
     description:
       "A fast one-page Next.js website for a small business, with SEO metadata, analytics, a working contact form, deployment and your domain connected. The client owns the code outright, with optional ongoing maintenance for a monthly rate.",
     price: 1200,
+  },
+  {
+    name: "Consultancy and existing site improvements",
+    description:
+      "Consultancy and improvement work on systems and websites that already exist: performance, SEO and accessibility improvements, migration away from page builders, architecture reviews before a decision is committed, and ongoing senior engineering advice. Quoted per case.",
   },
 ];
 
@@ -96,8 +104,7 @@ const graph = {
           "@type": "Offer",
           name: offer.name,
           description: offer.description,
-          price: offer.price,
-          priceCurrency: "EUR",
+          ...(offer.price ? { price: offer.price, priceCurrency: "EUR" } : {}),
           availability: "https://schema.org/InStock",
           url: `${siteUrl}/#services`,
           itemOffered: {
