@@ -31,6 +31,14 @@ export const websites: Website[] = [
     tags: ["Business site", "Enquiry form", "Three languages"],
   },
   {
+    domain: "handwritingmanifesto.org",
+    href: "https://www.handwritingmanifesto.org",
+    role: "Built the site and the signature system",
+    description:
+      "WordPress site for an international campaign to keep handwriting in schools. I set up the site and built the signature system behind it: people sign from anywhere, and the page shows a live count, the number of countries reached and a world map that fills in as new countries sign. Over 1.500 signatures from 49 countries so far, in English and Italian.",
+    tags: ["WordPress", "Live signature counter", "World map", "Two languages"],
+  },
+  {
     domain: "globalcucina.com",
     href: "https://globalcucina.com",
     role: "Built and maintained",
