@@ -92,6 +92,7 @@ const graph = {
         { "@type": "Place", name: "Remote" },
       ],
       availableLanguage: ["English", "German", "Italian"],
+      sameAs: ["https://www.linkedin.com/company/ercoledev"],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Vienna",
