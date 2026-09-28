@@ -85,5 +85,7 @@ the nautical licence school Nautiscuola and the Lupus Noctis Progressive Web App
 
 ## Pages
 
-- https://www.ercole.dev covers services, prices, projects and contact.
+- https://www.ercole.dev introduces Federico Ercole and links to the services page and the CV.
+- https://www.ercole.dev/services covers freelance packages, prices, live websites, selected
+  projects and project enquiries.
 - https://www.ercole.dev/cv covers the full CV, experience, technical skills and volunteering.

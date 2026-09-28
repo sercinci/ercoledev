@@ -51,7 +51,7 @@ export const Volunteering = () => {
                             transition={{ delay: index * 0.1 }}
                             className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all"
                         >
-                            <div className="flex items-start justify-between mb-3">
+                            <div className="flex items-start justify-between gap-4 mb-3">
                                 <div className="flex-1">
                                     <h3 className="text-xl font-bold text-primary mb-1">
                                         {activity.organization}

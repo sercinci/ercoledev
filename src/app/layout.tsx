@@ -13,16 +13,19 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "ErcoleDev | Freelance AI, Cloud & Web Engineering",
-    template: "%s | ErcoleDev",
+    default: "Federico Ercole | Senior Software & Product Engineer in Vienna",
+    template: "%s | Federico Ercole",
   },
   description:
-    "Federico Ercole, Senior Software Engineer in Vienna. Freelance AI voice agents, agentic automation, cloud architecture reviews and Next.js business sites. Fixed scope and fixed price.",
+    "Federico Ercole, senior software and product engineer in Vienna. Ten years building real-time AI voice, distributed systems on AWS and full-stack products. Available for freelance projects.",
   applicationName: "ErcoleDev",
   authors: [{ name: "Federico Ercole", url: siteUrl }],
   creator: "Federico Ercole",
   publisher: "Federico Ercole",
   keywords: [
+    "Federico Ercole",
+    "senior software engineer Vienna",
+    "product engineer Vienna",
     "freelance software engineer Vienna",
     "AI voice agent developer",
     "agentic AI consultant",
@@ -31,7 +34,6 @@ export const metadata: Metadata = {
     "Next.js developer Vienna",
     "freelance AI engineer Europe",
     "workflow automation freelancer",
-    "Federico Ercole",
     "ErcoleDev",
   ],
   category: "technology",
@@ -43,16 +45,16 @@ export const metadata: Metadata = {
     siteName: "ErcoleDev",
     locale: "en_GB",
     url: siteUrl,
-    title: "ErcoleDev | Freelance AI, Cloud & Web Engineering",
+    title: "Federico Ercole | Senior Software & Product Engineer in Vienna",
     description:
-      "Senior Software Engineer in Vienna. AI voice agents, agentic automation, cloud architecture reviews and Next.js business sites. Fixed scope and fixed price.",
+      "Ten years building real-time AI voice, distributed systems on AWS and full-stack products. Work with me or read the full CV.",
     images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ErcoleDev | Freelance AI, Cloud & Web Engineering",
+    title: "Federico Ercole | Senior Software & Product Engineer in Vienna",
     description:
-      "Senior Software Engineer in Vienna. AI voice agents, agentic automation, cloud architecture reviews and Next.js business sites.",
+      "Ten years building real-time AI voice, distributed systems on AWS and full-stack products. Work with me or read the full CV.",
     images: [ogImage],
   },
   icons: {

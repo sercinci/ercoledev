@@ -8,10 +8,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "./ThemeToggle";
 
 const homeNav = [
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
+];
+
+const servicesNav = [
   { name: "Offers", href: "#services" },
   { name: "Websites", href: "#websites" },
   { name: "Projects", href: "#projects" },
-  { name: "About", href: "#about" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -23,15 +27,20 @@ const cvNav = [
   { name: "Contact", href: "#contact" },
 ];
 
+/** The two pages the landing leads to. Each page links to the ones it is not. */
+const pages = [
+  { name: "Work with me", href: "/services" },
+  { name: "Full CV", href: "/cv" },
+];
+
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
-  const isCv = pathname?.startsWith("/cv") ?? false;
-  const navItems = isCv ? cvNav : homeNav;
-  const crossLink = isCv
-    ? { name: "Offers", href: "/" }
-    : { name: "Full CV", href: "/cv" };
+  const pathname = usePathname() ?? "/";
+  const isCv = pathname.startsWith("/cv");
+  const isServices = pathname.startsWith("/services");
+  const navItems = isCv ? cvNav : isServices ? servicesNav : homeNav;
+  const crossLinks = pages.filter(page => !pathname.startsWith(page.href));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +63,7 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navItems.map(item => (
             <Link
               key={item.name}
@@ -64,20 +73,28 @@ export const Header = () => {
               {item.name}
             </Link>
           ))}
-          <Link
-            href={crossLink.href}
-            className="text-sm font-medium px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors"
-          >
-            {crossLink.name}
-          </Link>
+          {crossLinks.map(page => (
+            <Link
+              key={page.href}
+              href={page.href}
+              className="text-sm font-medium whitespace-nowrap px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors"
+            >
+              {page.name}
+            </Link>
+          ))}
           <div className="border-l border-white/10 pl-6 ml-2">
             <ThemeToggle />
           </div>
         </nav>
 
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center gap-4 lg:hidden">
           <ThemeToggle />
-          <button className="p-2 text-foreground" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            className="p-2 text-foreground"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -90,7 +107,7 @@ export const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-white/5 overflow-hidden"
+            className="lg:hidden bg-background border-b border-white/5 overflow-hidden"
           >
             <nav className="flex flex-col p-6 gap-4">
               {navItems.map(item => (
@@ -103,13 +120,16 @@ export const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                href={crossLink.href}
-                onClick={() => setIsOpen(false)}
-                className="text-lg font-medium text-primary"
-              >
-                {crossLink.name}
-              </Link>
+              {crossLinks.map(page => (
+                <Link
+                  key={page.href}
+                  href={page.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-lg font-medium text-primary"
+                >
+                  {page.name}
+                </Link>
+              ))}
             </nav>
           </motion.div>
         )}

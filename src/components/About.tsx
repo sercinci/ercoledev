@@ -1,8 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+
+const ProductLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-primary font-medium hover:underline"
+  >
+    {children}
+  </a>
+);
 
 export const About = () => {
   return (
@@ -30,8 +39,11 @@ export const About = () => {
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             I am a product engineer as well as a software engineer. I decide what gets built, what
             gets cut and what ships first, a habit built leading early-stage startups where the
-            specification does not exist yet. xcore.gg, Picks & Bans and Sursk.it are my own
-            products, each taken from an idea and a domain name to a live platform with real users.
+            specification does not exist yet.{" "}
+            <ProductLink href="https://xcore.gg">xcore.gg</ProductLink>,{" "}
+            <ProductLink href="https://picknban.xyz">Picks &amp; Bans</ProductLink> and{" "}
+            <ProductLink href="https://sursk.it">Sursk.it</ProductLink> are my own products, each
+            taken from an idea and a domain name to a live platform with real users.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             I am at my best around other builders. I mentor developers on system design, cloud
@@ -62,15 +74,6 @@ export const About = () => {
                 <li>⚽ Football player</li>
               </ul>
             </div>
-          </div>
-
-          <div className="mt-12">
-            <Link
-              href="/cv"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary/10 border border-primary/20 text-primary font-medium hover:bg-primary/20 transition-colors"
-            >
-              Read the full CV <ArrowRight size={18} />
-            </Link>
           </div>
         </motion.div>
       </div>

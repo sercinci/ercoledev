@@ -107,7 +107,7 @@ const graph = {
           description: offer.description,
           ...(offer.price ? { price: offer.price, priceCurrency: "EUR" } : {}),
           availability: "https://schema.org/InStock",
-          url: `${siteUrl}/#services`,
+          url: `${siteUrl}/services`,
           itemOffered: {
             "@type": "Service",
             name: offer.name,
@@ -116,6 +116,14 @@ const graph = {
           },
         })),
       },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${siteUrl}/#profile`,
+      url: siteUrl,
+      name: "Federico Ercole",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: { "@id": `${siteUrl}/#federico` },
     },
     {
       "@type": "WebSite",

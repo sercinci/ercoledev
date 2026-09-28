@@ -1,29 +1,28 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Services } from "@/components/Services";
-import { Websites } from "@/components/Websites";
-import { Portfolio } from "@/components/Portfolio";
 import { About } from "@/components/About";
+import { Pathways } from "@/components/Pathways";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { MovedSectionRedirect } from "@/components/MovedSectionRedirect";
 import { ogImage } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "ErcoleDev | Freelance AI, Cloud & Web Engineering",
+    absolute: "Federico Ercole | Senior Software & Product Engineer in Vienna",
   },
   description:
-    "Federico Ercole, Senior Software Engineer in Vienna. Freelance AI voice agents, agentic automation, cloud architecture reviews and Next.js business sites. Fixed scope and fixed price.",
+    "Federico Ercole, senior software and product engineer in Vienna. Ten years building real-time AI voice, distributed systems on AWS and full-stack products. Available for freelance projects.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    type: "website",
+    type: "profile",
     url: "/",
-    title: "ErcoleDev | Freelance AI, Cloud & Web Engineering",
+    title: "Federico Ercole | Senior Software & Product Engineer in Vienna",
     description:
-      "Freelance AI voice agents, agentic automation, cloud architecture reviews and Next.js business sites. Fixed scope and fixed price, from €1.200.",
+      "Ten years building real-time AI voice, distributed systems on AWS and full-stack products. Work with me or read the full CV.",
     images: [ogImage],
   },
 };
@@ -31,12 +30,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <MovedSectionRedirect />
       <Header />
       <Hero />
-      <Services />
-      <Websites />
-      <Portfolio />
       <About />
+      <Pathways />
       <Contact />
       <Footer />
     </main>

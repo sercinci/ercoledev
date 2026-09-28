@@ -1,14 +1,20 @@
 /**
  * Next emits the generated Open Graph images as extensionless files (out/opengraph-image,
- * out/cv/opengraph-image). GitHub Pages serves those with the wrong content type, which makes
- * social scrapers drop the preview. Rename them to real .png files and keep a copy in public/
- * so the committed asset stays in sync with the source in src/app/**\/opengraph-image.tsx.
+ * out/services/opengraph-image, out/cv/opengraph-image). GitHub Pages serves those with the wrong
+ * content type, which makes social scrapers drop the preview. Rename them to real .png files and
+ * keep a copy in public/ so the committed asset stays in sync with the source in
+ * src/app/**\/opengraph-image.tsx.
  */
 import { copyFile, rename, access } from "node:fs/promises";
 import { constants } from "node:fs";
 
 const cards = [
   { generated: "out/opengraph-image", published: "out/og.png", tracked: "public/og.png" },
+  {
+    generated: "out/services/opengraph-image",
+    published: "out/og-services.png",
+    tracked: "public/og-services.png",
+  },
   { generated: "out/cv/opengraph-image", published: "out/og-cv.png", tracked: "public/og-cv.png" },
 ];
 

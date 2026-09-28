@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { websites } from "@/lib/websites";
+import { websites, type Website } from "@/lib/websites";
 
 /**
  * Hides itself when the file is missing, so a card still reads correctly before its screenshot
@@ -28,6 +28,18 @@ const Screenshot = ({ src, alt }: { src: string; alt: string }) => {
     />
   );
 };
+
+/** Offers a line break before each dot, or at the points the data lists, so a long domain wraps cleanly on a narrow card. */
+const Domain = ({ site }: { site: Website }) => (
+  <>
+    {(site.domainParts ?? site.domain.split(/(?=\.)/)).map((part, index) => (
+      <Fragment key={index}>
+        {index > 0 && <wbr />}
+        {part}
+      </Fragment>
+    ))}
+  </>
+);
 
 export const Websites = () => {
   return (
@@ -63,9 +75,9 @@ export const Websites = () => {
 
               <div className="flex flex-col flex-grow p-8">
                 <div className="flex items-start justify-between gap-4 mb-3">
-                  <div className="flex flex-col">
-                    <span className="text-2xl font-bold group-hover:text-primary transition-colors">
-                      {site.domain}
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-2xl font-bold group-hover:text-primary transition-colors wrap-anywhere">
+                      <Domain site={site} />
                     </span>
                     <span className="text-xs uppercase tracking-wide text-primary/80 mt-1">
                       {site.role}

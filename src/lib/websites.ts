@@ -1,5 +1,7 @@
 export type Website = {
   domain: string;
+  /** Where the domain may wrap on narrow cards, when a break before the dot is not enough. */
+  domainParts?: string[];
   href: string;
   role: string;
   description: string;
@@ -32,6 +34,7 @@ export const websites: Website[] = [
   },
   {
     domain: "handwritingmanifesto.org",
+    domainParts: ["handwriting", "manifesto.org"],
     href: "https://www.handwritingmanifesto.org",
     role: "Built the site and the signature system",
     description:

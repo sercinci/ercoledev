@@ -7,7 +7,11 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Live Site](https://img.shields.io/badge/live-www.ercole.dev-success)](https://www.ercole.dev)
 
-Personal portfolio website for **Federico Ercole**, a Senior Software Engineer based in Vienna, Austria. This modern, responsive portfolio showcases professional experience, technical skills, and projects with smooth animations and dark/light theme support.
+Personal website for **Federico Ercole**, a Senior Software Engineer based in Vienna, Austria. The site is split into three pages:
+
+- **`/`** is the personal landing: who Federico is, a short story and a clear way into the other two pages.
+- **`/services`** is the freelance commissioning page: fixed-price packages, live websites, selected work and project enquiries.
+- **`/cv`** is the full CV for recruiters and hiring teams: experience, skills, projects, hackathons and volunteering.
 
 ## 🌟 Features
 
@@ -33,20 +37,26 @@ Personal portfolio website for **Federico Ercole**, a Senior Software Engineer b
 ```
 src/
 ├── app/
-│   ├── layout.tsx       # Root layout with theme provider
-│   ├── page.tsx         # Main page composition
-│   └── globals.css      # Global styles
-└── components/
-    ├── Header.tsx       # Navigation header
-    ├── Hero.tsx         # Hero section with intro
-    ├── About.tsx        # About me section
-    ├── Experience.tsx   # Work experience timeline
-    ├── Skills.tsx       # Technical skills showcase
-    ├── Portfolio.tsx    # Projects portfolio
-    ├── Contact.tsx      # Contact information
-    ├── Footer.tsx       # Footer with links
-    ├── ThemeProvider.tsx # Theme context provider
-    └── ThemeToggle.tsx  # Dark/light mode toggle
+│   ├── layout.tsx           # Root layout, site-wide metadata and theme provider
+│   ├── page.tsx             # Personal landing (/)
+│   ├── services/page.tsx    # Freelance commissioning page (/services)
+│   ├── cv/page.tsx          # Full CV (/cv)
+│   ├── **/opengraph-image.tsx # Per-page Open Graph cards, generated at build time
+│   ├── sitemap.ts / robots.ts
+│   └── globals.css
+├── components/
+│   ├── Header.tsx           # Per-page navigation plus links to the other pages
+│   ├── Hero.tsx             # Landing intro and highlights
+│   ├── About.tsx            # Landing story
+│   ├── Pathways.tsx         # Landing doors to /services and /cv
+│   ├── Services.tsx         # Fixed-price packages
+│   ├── Websites.tsx         # Live sites clients can open
+│   ├── Portfolio.tsx        # Projects (client work or everything)
+│   ├── Experience.tsx, Skills.tsx, Volunteering.tsx # CV sections
+│   ├── Contact.tsx          # Project enquiry or general contact
+│   ├── StructuredData.tsx   # JSON-LD for person, business and offers
+│   └── Footer.tsx, ThemeProvider.tsx, ThemeToggle.tsx, VideoModal.tsx
+└── lib/                     # Project, website, link and SEO data
 ```
 
 ## 🚀 Getting Started

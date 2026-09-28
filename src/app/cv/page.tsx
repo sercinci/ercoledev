@@ -58,8 +58,8 @@ export default function Cv() {
               🇮🇹 Italian, 🇬🇧 English, 🇩🇪 German, 🇷🇴 Romanian, 🇫🇷 French
             </p>
             <Link
-              href="/#services"
-              className="inline-block px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+              href="/services"
+              className="inline-block px-6 sm:px-8 py-3 rounded-full bg-primary text-primary-foreground text-sm sm:text-base font-semibold hover:opacity-90 transition-opacity"
             >
               Looking to hire me for a project?
             </Link>
@@ -71,7 +71,7 @@ export default function Cv() {
       <Skills />
       <Portfolio variant="all" />
       <Volunteering />
-      <Contact />
+      <Contact variant="general" />
       <Footer />
     </main>
   );
