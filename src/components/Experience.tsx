@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
+    role: "Senior Product Engineer",
+    company: "charles",
+    period: "2026 - Present",
+    description:
+      "AI-native conversational commerce platform helping consumer brands market, sell and support customers over messaging channels such as WhatsApp and RCS. • Building an AI copilot that works alongside marketers, focused on memory, trust and keeping people in control • Building real-time, event-driven integrations that connect brands' own systems to the platform, with security and privacy in mind • Delivering analytics that show brands what drives engagement and revenue • Owning features end to end from first idea to production, with priorities set by real usage and production data",
+  },
+  {
     role: "Senior Software Engineer",
     company: "Hero Journey Club",
     period: "2024 - 2026",

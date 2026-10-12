@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Live Site](https://img.shields.io/badge/live-www.ercole.dev-success)](https://www.ercole.dev)
 
-Personal website for **Federico Ercole**, a Senior Software Engineer based in Vienna, Austria. The site is split into three pages:
+Personal website for **Federico Ercole**, a Senior Software & Product Engineer based in Vienna, Austria. The site is split into three pages:
 
 - **`/`** is the personal landing: who Federico is, a short story and a clear way into the other two pages.
 - **`/services`** is the freelance commissioning page: fixed-price packages, live websites, selected work and project enquiries.

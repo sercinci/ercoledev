@@ -11,7 +11,7 @@ import { ogImageCv } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "CV | Federico Ercole, Senior Software Engineer",
+    absolute: "CV | Federico Ercole, Senior Software & Product Engineer",
   },
   description:
     "Full CV of Federico Ercole. Senior full-stack engineering across real-time AI platforms, 60+ microservices on AWS and CTO-level work with startups.",
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "profile",
     url: "/cv",
-    title: "CV | Federico Ercole, Senior Software Engineer",
+    title: "CV | Federico Ercole, Senior Software & Product Engineer",
     description:
       "Ten years building real-time AI platforms, large distributed systems on AWS and full-stack products. Vienna, Austria.",
     images: [ogImageCv],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CV | Federico Ercole, Senior Software Engineer",
+    title: "CV | Federico Ercole, Senior Software & Product Engineer",
     description:
       "Ten years building real-time AI platforms, large distributed systems on AWS and full-stack products. Vienna, Austria.",
     images: [ogImageCv],
@@ -50,9 +50,10 @@ export default function Cv() {
               Federico <span className="text-primary">Ercole</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-4">
-              Senior Software Engineer based in Vienna, Austria. Ten years building real-time AI
-              platforms, large distributed systems on AWS and full-stack products, working as an
-              engineer, as a tech lead and as a CTO-level contributor to European startups.
+              Senior Software & Product Engineer based in Vienna, Austria. Ten years building
+              real-time AI platforms, large distributed systems on AWS and full-stack products,
+              working as an engineer, as a tech lead and as a CTO-level contributor to European
+              startups.
             </p>
             <p className="text-muted-foreground mb-8">
               🇮🇹 Italian, 🇬🇧 English, 🇩🇪 German, 🇷🇴 Romanian, 🇫🇷 French

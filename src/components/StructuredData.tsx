@@ -47,9 +47,9 @@ const graph = {
       url: siteUrl,
       image: `${siteUrl}/images/ED-512.png`,
       email: "mailto:federico@ercole.dev",
-      jobTitle: "Senior Software Engineer",
+      jobTitle: "Senior Software & Product Engineer",
       description:
-        "Senior Software Engineer based in Vienna, Austria, with ten years of experience in real-time AI platforms, large distributed systems on AWS and full-stack product development.",
+        "Senior Software & Product Engineer based in Vienna, Austria, with ten years of experience in real-time AI platforms, large distributed systems on AWS and full-stack product development.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Vienna",

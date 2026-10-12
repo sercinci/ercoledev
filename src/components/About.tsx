@@ -26,9 +26,9 @@ export const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-8">About Me</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             I am a senior software and product engineer based in Vienna, Austria. Ten years of
-            full-stack engineering on systems carrying real production traffic, at ImmobilienScout24
-            and at Hero Journey Club, and as the technical lead who built the cloud infrastructure
-            for a string of European startups.
+            full-stack engineering on systems carrying real production traffic, at charles, Hero
+            Journey Club and ImmobilienScout24, and as the technical lead who built the cloud
+            infrastructure for a string of European startups.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             I work across the frontend, the backend and the cloud with the same depth in each.

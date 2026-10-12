@@ -1,7 +1,7 @@
 # ErcoleDev, Federico Ercole
 
-> Federico Ercole is a Senior Software Engineer based in Vienna, Austria, with ten years of
-> experience in real-time AI platforms, large distributed systems on AWS and full-stack product
+> Federico Ercole is a Senior Software & Product Engineer based in Vienna, Austria, with ten years
+> of experience in real-time AI platforms, large distributed systems on AWS and full-stack product
 > development. He is available for freelance projects, sold as fixed-scope and fixed-price packages.
 
 - Website: https://www.ercole.dev
@@ -40,6 +40,11 @@ Custom work outside these packages is quoted on request.
 
 ## Experience
 
+- **charles (2026-present), Senior Product Engineer.** AI-native conversational commerce platform
+  helping consumer brands market, sell and support customers over WhatsApp and RCS. Builds an AI
+  copilot for marketers focused on memory, trust and human control, real-time event-driven
+  integrations with brands' own systems, and engagement and revenue analytics, owning features end
+  to end from first idea to production.
 - **Hero Journey Club (2024-2026), Senior Software Engineer.** Real-time AI-driven mental health
   platform embedded in gaming ecosystems. Architected a real-time AI voice communication platform
   using speech-to-text and text-to-speech pipelines, designed an event-driven AWS architecture with

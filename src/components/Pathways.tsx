@@ -38,7 +38,7 @@ const pathways: Pathway[] = [
     audience: "For recruiters and hiring teams",
     title: "Read the full CV",
     description:
-      "Ten years at ImmobilienScout24, Hero Journey Club and a string of European startups, as an engineer, a tech lead and a CTO-level contributor.",
+      "Ten years at charles, Hero Journey Club, ImmobilienScout24 and a string of European startups, as an engineer, a tech lead and a CTO-level contributor.",
     points: [
       "Experience, role by role",
       "Searchable technical skills",
