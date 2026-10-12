@@ -75,8 +75,8 @@ the nautical licence school Nautiscuola and the Lupus Noctis Progressive Web App
 
 ## Selected projects
 
-- **xcore.gg**: unified gaming profile across Steam, Xbox and PlayStation. Next.js, Node.js, AWS,
-  Prisma, PostgreSQL.
+- **Uzora** (uzora.gg): unified gaming profile across Steam, Xbox and PlayStation. Next.js,
+  Node.js, AWS, Prisma, PostgreSQL.
 - **Midnight Heist**: Minecraft experience with NPCs driven by large language models, including
   live transcription and real-time voice responses.
 - **Sursk.it**: full-stack Pokémon data application with a typed JSON API. Vue 3, FastAPI, Python.

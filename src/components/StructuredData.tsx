@@ -72,7 +72,7 @@ const graph = {
       sameAs: [
         "https://linkedin.com/in/federicoercole",
         "https://github.com/sercinci",
-        "https://xcore.gg",
+        "https://uzora.gg",
       ],
       worksFor: { "@id": `${siteUrl}/#business` },
     },

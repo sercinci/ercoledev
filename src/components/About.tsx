@@ -40,7 +40,7 @@ export const About = () => {
             I am a product engineer as well as a software engineer. I decide what gets built, what
             gets cut and what ships first, a habit built leading early-stage startups where the
             specification does not exist yet.{" "}
-            <ProductLink href="https://xcore.gg">xcore.gg</ProductLink>,{" "}
+            <ProductLink href="https://uzora.gg">Uzora</ProductLink>,{" "}
             <ProductLink href="https://picknban.xyz">Picks &amp; Bans</ProductLink> and{" "}
             <ProductLink href="https://sursk.it">Sursk.it</ProductLink> are my own products, each
             taken from an idea and a domain name to a live platform with real users.

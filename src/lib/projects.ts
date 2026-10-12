@@ -15,11 +15,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "xcore.gg",
+    title: "Uzora",
     description:
       "Live platform giving players one gaming identity across Steam, Xbox, PlayStation and more. Built and running on AWS with a Next.js frontend, a Node.js backend and PostgreSQL behind Prisma.",
     tags: ["Next.js", "Node.js", "AWS", "Prisma", "PostgreSQL"],
-    link: "https://xcore.gg",
+    link: "https://uzora.gg",
     forClients: true,
   },
   {
